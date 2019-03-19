@@ -1,0 +1,17 @@
+{
+  "name": "star",
+  "version": "1.0.0",
+  "description": "In memory star-query optimizer for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "generate-particle-data": "node example/particles/generate-particle-data.js",
+    "particle-example": "node example/particle-example.js"
+  },
+  "author": "Graham Willis",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "standard": "^12.0.1"
+  }
+}
