@@ -11,12 +11,12 @@
  * First set up the classifications and property dimensions. For each dimension object an
  * identifier needs to be assigned
  **/
-const Dimension = require('../lib/dimension')
-const chargeArr = require('../example/particles/properties/charge')
-const spinArr = require('../example/particles/properties/spin')
-const particleArr = require('../example/particles/properties/particle')
-const typeArr = require('../example/particles/properties/fundamental-type')
-const subtypeArr = require('../example/particles/properties/fundamental-subtype')
+const Dimension = require('../../lib/dimension')
+const chargeArr = require('./properties/charge')
+const spinArr = require('./properties/spin')
+const particleArr = require('./properties/particle')
+const typeArr = require('./properties/fundamental-type')
+const subtypeArr = require('./properties/fundamental-subtype')
 
 const dimensions = {}
 
@@ -31,8 +31,8 @@ dimensions.subtype = new Dimension('id', subtypeArr)
  * Set up the fact (measurement) table. The first argument is the large measurement array
  * and the second argument is an object which maps each row of that arrary to the dimensions
  **/
-const factArr = require('../example/particles/particle-fact')
-const Fact = require('../lib/fact')
+const factArr = require('./particle-fact')
+const Fact = require('../../lib/fact')
 
 console.log('Creating fact table')
 const fact = new Fact(factArr, {
@@ -68,3 +68,9 @@ result = fact.search({
   spin: [2, 6]
 })
 console.log(`Found ${result.length} records`)
+
+// Example: Calculate the average displacement of particles from origin
+const av = (r) => r.reduce((a, c) =>
+  Math.pow(Math.pow(c.xposition, 2) + Math.pow(c.yposition, 2) + Math.pow(c.zposition, 2), 0.5) + a, 0) / r.length
+
+console.log(`Average displacement ${av(result)}`)

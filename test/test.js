@@ -59,12 +59,19 @@ describe('Test star functions', function () {
       assert.strictEqual(results.length, 1)
     })
 
-    it('Search retuning all results', () => {
+    it('Search returning all results', () => {
       const results = fact.search({
         id1: 1,
         id2: [2, 3]
       })
       assert.strictEqual(results.length, 2)
+    })
+
+    it('Search returning null result', () => {
+      const results = fact.search({
+        id1: 3, id2: 2
+      })
+      assert.strictEqual(results.length, 0)
     })
   })
 })
