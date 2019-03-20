@@ -29,7 +29,7 @@ dimensions.subtype = new Dimension('id', subtypeArr)
 
 /**
  * Set up the fact (measurement) table. The first argument is the large measurement array
- * and the second argument is an object which maps each row of that arrary to the dimensions
+ * and the second argument is an object which maps each row of that array to the dimensions
  **/
 const factArr = require('./particle-fact')
 const Fact = require('../../lib/fact')
@@ -46,7 +46,7 @@ const fact = new Fact(factArr, {
  * We can now access various searches on the data as follows
  **/
 
-// Get all measurements of fermisions spin one-half
+// Get all measurements of fermions spin one-half
 console.log('Simple search')
 let result = fact.search({
   fundamentalType: 1,
@@ -69,7 +69,7 @@ result = fact.search({
 })
 console.log(`Found ${result.length} records`)
 
-// Example: Calculate the average displacement of particles from origin
+// Example: Calculate the average displacement of particles from the origin
 const av = (r) => r.reduce((a, c) =>
   Math.pow(Math.pow(c.xposition, 2) + Math.pow(c.yposition, 2) + Math.pow(c.zposition, 2), 0.5) + a, 0) / r.length
 
