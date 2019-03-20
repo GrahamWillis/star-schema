@@ -34,9 +34,11 @@ Define a potentially large array for example sales data
 
 ```
 const salesArr = [
-  { colour: 1, size: 2, style: 1, price: 45 },
+  { colour: 2, size: 2, style: 1, price: 45 },
   { colour: 1, size: 3, style: 2, price: 43 },
-  { colour: 3, size: 4, style: 1, price: 15 }
+  { colour: 3, size: 2, style: 1, price: 15 },
+  { colour: 3, size: 2, style: 1, price: 17 },
+  { colour: 3, size: 4, style: 1, price: 19 }
 ]
 ```
 Create a fact table using the array mapped to the dimensions
@@ -52,13 +54,12 @@ Apply searches to the results
 ```
 const results = fact.search({ colour: [1, 3], style: [1, 2] })
 ...
-[ { colour: 1, size: 2, style: 1, price: 45 },
-  { colour: 1, size: 3, style: 2, price: 43 },
-  { colour: 3, size: 4, style: 1, price: 15 } ]
+[ { colour: 3, size: 2, style: 1, price: 15 },
+  { colour: 3, size: 2, style: 1, price: 17 } ]
 
 const value = results.reduce((a, c) => a + c.price, 0)
 ...
-103
+32
 
 ```
 
