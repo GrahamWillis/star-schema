@@ -1,5 +1,5 @@
 {
-  "name": "star",
+  "name": "star-search",
   "version": "1.0.0",
   "description": "Star-query like optimizer for javascript",
   "main": "index.js",

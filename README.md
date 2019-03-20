@@ -10,7 +10,7 @@ Usage:
 Define a number of attributes or dimensions. Each attribute value needs to be given a numeric identifier preferably from a sequence
 
 ```
-const { Fact, Dimension } = require('star')
+const { Fact, Dimension } = require('star-search')
 
 const colours = new Dimension('id', [
   { id: 1, name: 'Red' },
