@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/GrahamWillis/star-schema.svg?branch=master)](https://travis-ci.com/GrahamWillis/star-schema)
+
 # star-schema
 This package is can perform star-schema like operations on a set of JavaScript objects. Star schema optimization is a data-warehousing terminology.
 
@@ -53,7 +55,7 @@ Apply searches to the results
 
 ```
 const results = fact.search({ colour: [1, 3], style: [1, 2] })
-...
+...[![Build Status](https://travis-ci.com/GrahamWillis/star-schema.svg?branch=master)](https://travis-ci.com/GrahamWillis/star-schema)
 [ { colour: 3, size: 2, style: 1, price: 15 },
   { colour: 3, size: 2, style: 1, price: 17 } ]
 
