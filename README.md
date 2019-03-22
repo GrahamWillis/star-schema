@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/GrahamWillis/star-schema.svg?branch=master)](https://travis-ci.com/GrahamWillis/star-schema)
 # star-schema
-This package is can perform star-schema like operations on a set of JavaScript objects. Star schema optimization is a data warehousing terminology where a set of measurements are held in a fact table which typically contains a large volume of data. Each of the measurements will have a set of attributes that can be used to filter results and aggregate data. The attributes are held in dimension tables which each have a one-to-many relationship to the fact table. The set of relationship values for any given entry in the fact table is stored as a bitmap index enabling complex searches on combinations of attribute values to be performed with a single scan of the index.
+This package can perform star-schema like operations on a set of JavaScript objects. Star schema optimisation is a data warehousing terminology where a set of measurements are held in a fact table which typically contains a large volume of data. Each of the measurements will have a set of attributes that can be used to filter results and aggregate data. The attributes are held in dimension tables which each have a one-to-many relationship to the fact table. The set of relationship values for any given entry in the fact table is stored as a bitmap index enabling complex searches on combinations of attribute values to be performed with a single scan of the index.
 
 ## Usage
 ### Dimensions
