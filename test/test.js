@@ -18,7 +18,13 @@ describe('Test star functions', function () {
 
     it('Missing key', () => {
       assert.throws(() => {
-        new Dimension('id', [ { id: '1' }, { } ])
+        new Dimension('id', [ { id: 1 }, { } ])
+      })
+    })
+
+    it('Not contiguous starting at 1', () => {
+      assert.throws(() => {
+        new Dimension('id', [ { id: 0 }, { id: 2 } ])
       })
     })
   })

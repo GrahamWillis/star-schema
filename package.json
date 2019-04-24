@@ -1,6 +1,6 @@
 {
   "name": "star-search",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Star-query like optimizer for javascript",
   "main": "index.js",
   "scripts": {
